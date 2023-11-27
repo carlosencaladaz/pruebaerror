@@ -11,3 +11,7 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`La aplicación está corriendo en http://localhost:${port}`);
 });
+app.post('/seleccion', (req, res) => {
+  const opcionSeleccionada = req.body.opcion;
+  res.send(`Has seleccionado la opción: ${opcionSeleccionada}`);
+});
